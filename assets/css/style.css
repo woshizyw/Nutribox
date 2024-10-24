@@ -1,0 +1,398 @@
+/* Navbar Styles */
+.navbar {
+    background-color: #fff;
+    padding: 10px 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 添加阴影使navbar更显眼 */
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+/* Logo Styles */
+.navbar-brand img {
+    border-radius: 50%;
+    background-color: #b8ffb3; /* Logo 背景色 */
+    padding: 5px;
+}
+
+.navbar-brand {
+    font-size: 24px;
+    font-weight: bold;
+    color: #27ae60; /* 自定义绿色 */
+}
+
+/* Navbar links */
+.nav-link {
+    font-size: 18px;
+    color: #333;
+    padding: 10px;
+    transition: background-color 0.3s ease;
+    border-radius: 5px;
+}
+
+.nav-link:hover {
+    background-color: #27ae60; /* 鼠标悬停时的背景色 */
+    color: #fff;               /* 鼠标悬停时的文字颜色 */
+}
+
+
+body {
+    padding-top: 30px; /* 给body增加顶部间距以适应固定navbar */
+}
+
+/* User icon style */
+.user-icon {
+    border-radius: 50%;
+    background-color: #b8ffb3; /* 背景色 */
+    padding: 5px;
+}
+
+
+
+/* 确保页面内容的最小高度占据整个页面 */
+html, body {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+/* 主内容部分，确保其弹性伸展 */
+.container {
+    flex: 1;
+}
+
+/* 固定footer到页面底部 */
+footer {
+    background-color: #f8f9fa;
+    font-size: 14px;
+    color: #6c757d;
+    text-align: center;
+    padding: 10px 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+#tags-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.tag-button {
+    padding: 5px 15px;
+    border-radius: 50px;
+    font-size: 14px;
+    font-weight: 500;
+    text-transform: capitalize;
+}
+
+#custom-tag-input {
+    border-radius: 50px;
+}
+
+#add-custom-tag {
+    border-radius: 50px;
+    margin-left: 10px;
+}
+
+.input-group {
+    display: flex;
+    align-items: center;
+}
+
+.input-group .form-control {
+    border-radius: 50px;
+}
+
+#apply-filters {
+    background-color: #aeaeae;
+    border-radius: 50px;
+    padding: 10px;
+    font-weight: 600;
+    font-size: 16px;
+}
+
+h3 {
+    font-weight: 600;
+    font-size: 20px;
+}
+
+
+
+/* 左侧功能区固定 */
+#left-sidebar .sticky-top {
+    position: sticky;
+    top: 80px; /* 固定在navbar下方 */
+}
+
+/* 主内容框架 */
+#main-content {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    gap: 10px; /* 增加左右区域之间的间距 */
+}
+
+
+
+/* 左侧功能区边框 */
+#left-sidebar {
+    border: 2px solid #000000; 
+    padding: 15px;
+    border-radius: 10px;
+    background-color: #f9f9f9; 
+    height: 100vh; /* 固定高度，确保跟随页面滚动 */
+    position: sticky;
+    top: 80px;
+}
+
+/* 右侧菜单展示区边框 */
+#menu-content {
+    border: 2px solid #000000; /* 添加灰色边框 */
+    padding: 15px;
+    border-radius: 10px; /* 使边框有圆角 */
+    background-color: #fff; /* 背景颜色 */
+}
+
+/* 统一 MealKit 卡片大小 */
+#mealkit-grid .card {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+#mealkit-grid .card img {
+    height: 200px; /* 图片固定高度 */
+    object-fit: cover; /* 保证图片缩放时不会变形 */
+}
+
+/* 每行显示4个 MealKits */
+#mealkit-grid .col-md-4 {
+    flex: 0 0 25%; /* 每行4个菜单项，每个占25% */
+    max-width: 25%;
+}
+
+
+
+/* 修改按钮样式 */
+.btn-primary {
+    background-color: #000 !important;
+    border-color: #000 !important;
+    color: #fff !important;
+}
+
+.btn-primary:hover {
+    background-color: #333 !important;
+    border-color: #333 !important;
+    color: #fff !important;
+}
+
+
+
+
+/* 标签和排序按钮的默认样式（黑色边框和黑色文字） */
+.tag-button, .sort-button {
+    color: #000;
+    border-color: #000;
+    background-color: transparent;
+    padding: 5px 15px;
+    border-radius: 10px;
+    font-size: 14px;
+    font-weight: 540;
+    text-transform: capitalize;
+    transition: all 0.3s ease;
+}
+
+/* 鼠标悬停时，边框和文字保持不变 */
+.tag-button:hover, .sort-button:hover {
+    color: #333;
+    border-color: #333;
+    background-color: transparent;
+}
+
+/* 点击后的选中样式（黑色背景和白色文字） */
+.tag-button.active, .sort-button.active {
+    background-color: #000;
+    color: #fff;
+    border-color: #000;
+}
+
+/* 自定义标签输入框和按钮的样式 */
+#custom-tag-input {
+    border-radius: 50px;
+}
+
+#add-custom-tag {
+    border-radius: 50px;
+    margin-left: 10px;
+    background-color: #000;
+    color: #fff;
+    border-color: #000;
+}
+
+/* 自定义标签按钮的悬停效果 */
+#add-custom-tag:hover {
+    background-color: #333;
+    border-color: #333;
+}
+
+
+
+
+
+/* Mealkit 卡片的默认样式 */
+.card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    overflow: hidden; /* 防止描述信息溢出 */
+}
+
+/* 当鼠标悬停时放大卡片并添加阴影效果 */
+.card:hover {
+    transform: scale(1.1);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* 隐藏描述信息，默认情况下不显示 */
+.card-description {
+    display: none;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+/* 鼠标悬停时显示描述信息 */
+.card:hover .card-description {
+    display: block;
+    opacity: 1;
+    margin-top: 10px; /* 让描述信息与价格等信息有一点间距 */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* 购物车侧边栏 */
+.cart-panel {
+    position: fixed;
+    top: 60px; /* 确保购物车从 navbar 下方开始 */
+    right: -400px;
+    width: 400px;
+    height: calc(100% - 60px); /* 购物车高度应小于页面总高度减去 navbar 的高度 */
+    background-color: rgba(255,255,255,0.9);
+    border: 2px solid #000;
+    z-index: 1050;
+    transition: right 0.4s ease;
+    display: flex;
+    flex-direction: column;
+    border-radius: 15px;
+}
+
+.cart-panel.open {
+    right: 0;
+}
+
+.cart-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    border-bottom: 1px solid #ddd;
+}
+
+.cart-body {
+    flex: 1;
+    overflow-y: auto;
+    padding: 15px;
+}
+
+.cart-footer {
+    padding: 15px;
+    border-top: 1px solid #ddd;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.cart-item {
+    display: flex;
+    align-items: center;
+    padding: 10px 0;
+}
+
+.cart-item img {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    margin-right: 15px;
+    border-radius: 5px;
+}
+
+.cart-item-details {
+    flex: 1;
+}
+
+.cart-item-actions {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.btn-close {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+}
+
+.btn-close:hover {
+    cursor: pointer;
+}
+
+
+
+
+
+.cart-item-info {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.item-details {
+    border-top: 1px solid #ddd;
+    padding-top: 10px;
+    margin-top: 10px;
+}
+
+.custom-option {
+    padding: 5px;
+    background-color: #f8f8f8;
+    border: 1px solid #ddd;
+    margin-top: 5px;
+    border-radius: 5px;
+}
+
+.custom-option button {
+    background-color: #333;
+    color: white;
+    margin-left: 10px;
+}
+
+.extra-items .extra-item {
+    margin-top: 5px;
+    padding: 5px;
+    background-color: #e7f3e7;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}

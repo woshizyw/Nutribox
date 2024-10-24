@@ -1,0 +1,70 @@
+# NutriBox (MealKit) - Food Ordering Web Platform by Half Half
+You can run it locally or visit our website directly (https://nutribox.azurewebsites.net/)
+
+Welcome to NutriBox, a food ordering platform designed to allow UQ students to order meals from various pick-up points around the campus. This application provides a simple, user-friendly way for users to browse meal kits, place orders, and view their order history. Sellers can also upload their meal kits to sell to others.
+
+Features
+User Registration & Login:    Users can sign up and log in to place orders and track their order history.
+Order Meals:                  Users can browse available meal kits and place orders for pick-up.
+Meal Kit Uploads:             Sellers can upload their own meal kits for users to purchase.
+Pick-up Locations:            The platform provides a map with available pick-up locations at UQ campuses.
+Order History:                Users can view their order history, including meal kit details, pickup time, and location.
+
+After downloading the Zip file please unzip it and put the nutribox file into the www folder of wamp to run the website locally. Localhost Environmental Installation，To run this project locally, you'll need to have the following installed Wamp on your computer.
+
+## 1. Wamp
+I strongly recommend you to use Wamp, if you download and install WAMP (Windows, Apache, MySQL, PHP), you won't need to install the individual components like PHP, MySQL, Apache, or phpMyAdmin separately. WAMP provides an all-in-one package that includes everything you need to run a PHP application with a MySQL database. 
+
+Download WAMP:
+Visit the official WAMPServer website（https://www.wampserver.com/en/）.
+Download the appropriate version of WAMP (either 32-bit or 64-bit depending on your system).
+
+Install WAMP:
+Run the WAMP installer and follow the prompts.
+During installation, WAMP will ask you to choose the default browser and text editor (you can use any or stick with the default).
+
+Start WAMP:
+After installation, launch WAMP. You should see a green icon in the system tray (bottom right corner). If it’s green, everything is working fine. If the icon is orange or red, it indicates there’s an issue (likely with Apache not starting). You might need to check if other services like Skype or IIS are using port 80.
+
+Access WAMP:
+Open a web browser and type http://localhost/ or http://127.0.0.1/. You should see the WAMPServer homepage.
+
+Manage Databases:
+To manage databases, visit http://localhost/phpmyadmin/. You can log in using the default username root with no password.
+
+Place Half Half Project:
+Copy your PHP project folder into the C:/wamp64/www/ directory.
+Access Half Half project by visiting http://localhost/NutriBox.
+
+
+## 2. Set Up the Database
+Import SQL Tables
+a, First, open it with Wamp turned on (http://localhost/phpmyadmin/)
+b, Create a new database named (nutribox_db).
+c, import 'nutribox.sql' in the Half Half Zip file you just unzipped. First, click the database nutribox_db that you just created. Then click the Import button above and select the nutribox.sql file in the Half Half Zip file that you just unzipped. Finally, click the Import button below to successfully import the database. After successful import, you should be able to see many tables that you need to use in your project.
+
+## 3. Configure the Project
+In the includes/db.php file, make sure the database connection is configured properly:
+The default username (root) and password (blank) should be as follows. If you have set a different username and password for your database, replace the user and pass in the following code.
+
+$host = 'localhost';
+$db = 'nutribox_db';
+$user = 'root';
+$pass = '';
+
+
+## 4. Run the Project
+http://localhost/nutribox
+Enter the following URL in your browser to access the NutriBox homepage. To ensure a good experience, please register and log in as soon as possible. Once you log in, you will be able to create tags, mealkits, community posts, and more.
+
+## 5. Application Structure
+index.php: The home page of NutriBox, displaying the welcome message, meal kits, and Google Maps.
+pages/menu.php: Displays the menu with available meal kits.
+pages/checkout.php: Checkout page for placing an order and selecting a pickup location.
+pages/userinfo.php: User information page, including order history and meal kit management.
+includes/db.php: Handles the database connection.
+uploads/: Contains uploaded meal kit images.
+assets/: Contains CSS, JavaScript, and images for the project.
+
+## 6. Conclusion
+You should now have NutriBox running locally on your machine. You can explore the platform, create meal kits, place orders, and view your order history. If you encounter any issues, please feel free to contact me.
